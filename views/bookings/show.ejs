@@ -1,0 +1,11 @@
+<% layout("/layouts/boilerplate") %>
+<h1>Booking for <%= booking.listing.title %></h1>
+<p>Start Date: <%= booking.startDate.toDateString() %></p>
+<p>End Date: <%= booking.endDate.toDateString() %></p>
+<p>Status: <%= booking.status %></p>
+
+<a href="/bookings/<%= booking._id %>/edit">Edit Booking</a>
+
+<form action="/bookings/<%= booking._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete Booking</button>
+</form>

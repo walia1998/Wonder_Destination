@@ -1,0 +1,270 @@
+.main-profiles {
+    margin-bottom: 3rem;
+}
+
+.main-profile-detail {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2.5rem;
+    background-color: #5271ff;
+    border-radius: 5px;
+    padding: 30px 30px 40px 30px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35), 0px 5px 5px rgb(22, 6, 89);
+}
+
+.profile-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-user h4 {
+    color: grey);
+}
+
+.manage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.manage-hide {
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+
+.manage form button,
+.list-btn,
+.deleteAll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 2.6rem;
+    width: 8rem;
+    border: 1px solid grey;
+    border-radius: 20px;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    box-shadow: inset 0px 4px 6px black;
+}
+
+.manage .update:hover,
+.lists-btn .list-show:hover {
+    background-color: #5271ff;
+}
+
+.manage .delete:hover,
+.list-delete:hover {
+    background-color: #8C52FF;
+}
+
+.manage form button:active,
+.list-btn:active {
+    box-shadow: inset 0px 6px 7px black;
+}
+
+.lists-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.list-btn {
+    height: 2rem;
+    width: 6rem;
+}
+
+.lists-btn .list-show a {
+    text-decoration: none;
+    color: black;
+}
+
+.profile-box {
+    min-height: 20rem;
+}
+
+.listing-count {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.listing-count form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-list:hover {
+    background-color: #5271ff;
+}
+
+.delete-list:hover {
+    background-color: #8C52FF;
+}
+
+.deleteAll:active {
+    box-shadow: inset 0px 6px 7px black;
+}
+
+.choose-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.choose-list div label {
+    margin-right: 20px;
+}
+
+.choose-list div input {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.choose-list div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.choose-list div input,
+.choose-list div label {
+    cursor: pointer;
+}
+
+#review-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#review-body .ratingBox {
+    display: flex;
+    justify-content: center;
+}
+
+#review-body span:last-child {
+    margin-bottom: 1rem;
+}
+
+div.profile-img {
+    position: relative;
+    height: 170px;
+    width: 170px;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+div.profile-img > img {
+    height: inherit;
+    width: inherit;
+}
+
+div.profile-img > div {
+    position: absolute;
+    bottom: 0px;
+    height: 60px;
+    width: inherit;
+    background-color: rgba(88, 85, 85, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+div.profile-img > div a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: rgb(224, 224, 224);
+}
+
+div.profile-img > div:hover {
+    opacity: 1;
+}
+
+@media (max-width: 586px) {
+    .card-img-top {
+        height: 100%;
+        position: relative;
+        top: 0px;
+    }
+
+    .lists-btn {
+        margin: 0px 20px;
+    }
+
+    .listing-count {
+        flex-direction: column;
+    }
+
+    .listing-count form {
+        flex-direction: row;
+        justify-content: space-between;
+        /* min-width: 270px; */
+    }
+
+    .create-list,
+    .update {
+        margin-right: 15px;
+    }
+
+    #review-body {
+        max-width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile-user span {
+        display: none;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .manage {
+        display: none;
+    }
+
+    .manage-hide {
+        display: flex;
+    }
+
+    div.profile-img {
+        min-height: 120px;
+        min-width: 120px;
+        height: 120px;
+        width: 120px;
+    }
+
+    .main-profile-detail {
+        padding: 25px 5px;
+    }
+
+    div.profile-img > div {
+        opacity: 1;
+        height: 40px;
+    }
+
+    div.profile-img > div a i {
+        font-size: 1.5rem;
+    }
+}

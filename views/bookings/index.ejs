@@ -1,0 +1,11 @@
+<% layout("/layouts/boilerplate") %>
+<h1>Your Bookings</h1>
+<ul>
+    <% bookings.forEach(booking => { %>
+        <li>
+            <a href="/bookings/<%= booking._id %>">
+                <%= booking.listing.title %> from <%= booking.startDate.toDateString() %> to <%= booking.endDate.toDateString() %>
+            </a>
+        </li>
+    <% }) %>
+</ul>

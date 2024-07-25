@@ -1,0 +1,11 @@
+<% layout("/layouts/boilerplate") %>
+<h1>Edit Booking for <%= booking.listing.title %></h1>
+<form action="/bookings/<%= booking._id %>?_method=PUT" method="POST">
+    <label for="startDate">Start Date</label>
+    <input type="date" name="startDate" id="startDate" value="<%= booking.startDate.toISOString().split('T')[0] %>">
+
+    <label for="endDate">End Date</label>
+    <input type="date" name="endDate" id="endDate" value="<%= booking.endDate.toISOString().split('T')[0] %>">
+
+    <button type="submit">Update Booking</button>
+</form>
