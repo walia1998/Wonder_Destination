@@ -182,7 +182,7 @@ module.exports.search = async (req, res) => {
 		}
 	}
 	if (allListing.length == 0) {
-		req.flash("error", "Listings is not here !!!");
+		res.locals.success("error", "Listings is not here !!!");
 		res.redirect("/listings");
 	}
 };

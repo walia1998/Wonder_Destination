@@ -45,7 +45,7 @@ app.listen(8080, () => {
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
-app.use("/bookings", bookingRouter);
+
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public/")));
@@ -109,6 +109,7 @@ app.use("/auth/facebook", facebookRoute);
 app.use("/", userRouter);
 app.use("/profile", profileRouter);
 app.use("/listings", listingRouter);
+app.use("/bookings", bookingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.all("*", (req, res, next) => {
 	next(new ExpressError(404, "Page Not Found!"));

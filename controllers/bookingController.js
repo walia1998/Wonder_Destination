@@ -22,7 +22,7 @@ module.exports.showAllBookings = async (req, res) => {
 module.exports.showBooking = async (req, res) => {
     const booking = await Booking.findById(req.params.id).populate("listing");
     if (!booking) {
-        req.flash("error", "Booking not found");
+        res.locals.success("error", "Booking not found");
         return res.redirect("/bookings");
     }
     res.render("bookings/show", { booking });
@@ -31,12 +31,12 @@ module.exports.showBooking = async (req, res) => {
 module.exports.updateBooking = async (req, res) => {
     const { startDate, endDate } = req.body;
     const booking = await Booking.findByIdAndUpdate(req.params.id, { startDate, endDate }, { new: true });
-    req.flash("success", "Successfully updated the booking!");
+    res.locals.success("success", "Successfully updated the booking!");
     res.redirect(`/bookings/${booking._id}`);
 };
 
 module.exports.deleteBooking = async (req, res) => {
     await Booking.findByIdAndDelete(req.params.id);
-    req.flash("success", "Successfully deleted the booking!");
+    res.locals.success("success", "Successfully deleted the booking!");
     res.redirect("/bookings");
 };
