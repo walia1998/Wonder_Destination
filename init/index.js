@@ -47,7 +47,7 @@ const initDB = async () => {
 	await Listing.deleteMany({});
 	initData.data = initData.data.map((obj) => ({
 		...obj,
-		owner: "66a28d554d76048303c43aed",
+		owner: "66922eaa404b9b8779b28a41",
 		price: obj.price * 25,
 		category: [
 			`${categoryAll[Math.floor(Math.random() * 22)]}`,

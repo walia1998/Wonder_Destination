@@ -333,13 +333,13 @@ body::-webkit-scrollbar-thumb,
 .ashish {
     z-index: 10;
     font-size: .8rem;
-    background-color: rgba(16, 15, 15, 0.592);
+    background-color: rgba(16, 15, 15, 0.392);
     padding: 2px 5px;
     border-radius: 5px;
     text-decoration: none !important;
     font-weight: 800;
     padding: 0px 10px;
-    border: 2px solid rgba(0, 0, 0, 0.781);
+    border: 2px solid rgba(0, 0, 0, 0.463);
     position: absolute;
     left: 20px;
     bottom: 10px;
